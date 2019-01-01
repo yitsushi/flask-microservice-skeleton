@@ -1,0 +1,14 @@
+*.un~
+__pycache__
+.tox
+.coverage
+pip-selfcheck.json
+.Python
+example_service.egg-info
+docs/build/
+src
+bin
+lib
+include
+.cache
+.pytest_cache
