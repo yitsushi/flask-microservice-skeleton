@@ -5,7 +5,7 @@ PYTHON = $(BIN)/python
 
 INSTALL = $(BIN)/pip install --no-deps
 
-.PHONY: all test docs build_extras
+.PHONY: all test docs build_extras dist build
 
 all: build
 
@@ -27,3 +27,7 @@ test: build test_dependencies
 
 run:
 	FLASK_APP=example_service bin/flask run
+
+dist:
+	$(INSTALL) wheel
+	$(PYTHON) setup.py sdist bdist_wheel

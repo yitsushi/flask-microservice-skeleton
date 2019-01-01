@@ -1,10 +1,11 @@
 import os
 import unittest
-from example_service import app
+from example_service.app import create
 
 
 class TestMain(unittest.TestCase):
     def setUp(self):
+        app = create()
         app.config['TESTING'] = True
         app.config['WTF_CSRF_ENABLED'] = False
         app.config['DEBUG'] = False
